@@ -60,12 +60,6 @@ Learning for trust and privacy related applications.
 │   │   ├── metrics.py
 │   │   └── model_metrics.py
 │   ├── dataset
-│   │   ├── cpu_sample_dataset_orangepi.csv
-│   │   ├── cpu_sample_dataset.csv
-│   │   ├── CPU_usage_data_joined.csv
-│   │   ├── node_3_utilisation_sample_dataset.csv
-│   │   ├── sample_1.csv
-│   │   └── sample_orange_pi.csv
 │   ├── api_service.py
 │   ├── api_service_configs.json
 │   ├── api_train.py
