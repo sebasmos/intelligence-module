@@ -87,9 +87,9 @@ Learning for trust and privacy related applications.
 │       └── monitoring.py   
 ├── test
 │   ├── api
-        ├── misc_services.py
-        ├── model_inference.py
-        ├── model_training.py
+    │    ├── misc_services.py
+    │    ├── model_inference.py
+    │    ├── model_training.py
     ├── marketplace
         ├── test_hf.py
         ├── test_libraries.py
