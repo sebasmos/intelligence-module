@@ -90,6 +90,9 @@ Learning for trust and privacy related applications.
         ├── misc_services.py
         ├── model_inference.py
         ├── model_training.py
+    ├── marketplace
+        ├── test_hf.py
+        ├── test_libraries.py
 ```
 * .gitignore:
     -  Files that should be ignored by git. Add seperate .gitignore files in sub folders if needed
