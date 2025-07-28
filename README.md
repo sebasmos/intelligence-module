@@ -133,7 +133,7 @@ Learning for trust and privacy related applications.
 A docker image has been provided which can be found [here](https://drive.google.com/file/d/1dIpbUn8GnhN93AHQLLA4vW6GZNMWuvsq/view?usp=sharing ). This image is intended to be run in the ICOS Controller with a x86 architecture in the alpha version. 
 
 - Run the below command to launch the service as a docker
-`docker run --network host -it --rm -p 3000:3000 -p 5000:5000 --cpus 15 --memory 14g -e BENTOML_CONFIG_OPTIONS='api_server.traffic.timeout=600 runners.resources.cpu=0.5 runners.resources."nvidia.com/gpu"=0' analytics:latest serve`
+`docker run --network host -it --rm -p 3000:3000 -p 5000:5000 --cpus 15 --memory 20g -e BENTOML_CONFIG_OPTIONS='api_server.traffic.timeout=1200 runners.resources.cpu=0.5 runners.resources."nvidia.com/gpu"=0' analytics:latest serve`
 
 The above command would enable the ICOS Intelligence Layer Coordination API server to be launched at http://0.0.0.0:3000, which could be accessed using any browser.
 
