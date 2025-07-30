@@ -13,7 +13,7 @@ models are synchronized, preventing unnecessary storage usage and processing ove
 
 Copyright (c) 2025 National and Kapodistrian University of Athens (NKUA)
 Author: Anastasios Kaltakis
-License: MIT
+License: Apache 2.0
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -50,7 +50,7 @@ import torch
 
 __author__ = "Anastasios Kaltakis"
 __copyright__ = "Copyright (c) 2025 NKUA"
-__license__ = "MIT"
+__license__ = "Apache 2.0"
 __version__ = "1.0.0"
 __maintainer__ = "Anastasios Kaltakis"
 __email__ = "anastasioskaltakis@gmail.com"
