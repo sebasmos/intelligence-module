@@ -191,19 +191,6 @@ The current code has been tested in below setups:
     - **VM Configuration in OpenVPN:**
         - [VM Configuration Link](https://newrepository.atosresearch.eu/index.php/f/1271920), located under the WP5 folder.
 
-    - **Access Information:**
-        - SSH Command:
-            ```bash
-            ssh -l icos -L 3000:localhost:3000 10.160.3.200
-            ```
-        - Username: `icos`
-        - Password: `icosmeta`
-        - VM name: `icosapi`
-    - **Conda environment**:
-        - Activate environment: `conda activate icos`
-    - **Remarks:**
-        - Port 3000 is port-forwarded to enable BentoML to compile inside the VM.
-
 
 ## Requirements
 
