@@ -100,10 +100,6 @@ Learning for trust and privacy related applications.
 * bentofile.yaml:
     - Configuration file to create a bento.
 
-* apis: 
-    - This folder includes a openapi.yaml which will contain the definitions of the API.
-    - This file describes an API in its entirety, including: Endpoints: which are available and operations on each (GET /users, POST /users) Authentication methods.
-
 * oasis/src:
     - This folder contains the source code for running the API
     1. dataset:
@@ -123,14 +119,27 @@ Learning for trust and privacy related applications.
         - This contains all necessary libraries along with versions required for the API
 
 * test: 
-    - Tests for the API and its models.
+    - Unit Test Cases for the ICOS Intelligence API.
 
 ## Starting the API service
 
 A docker image has been provided which can be found [here](https://drive.google.com/file/d/1dIpbUn8GnhN93AHQLLA4vW6GZNMWuvsq/view?usp=sharing ). This image is intended to be run in the ICOS Controller with a x86 architecture in the alpha version. 
 
-- Run the below command to launch the service as a docker
-`docker run --network host -it --rm -p 3000:3000 -p 5000:5000 --cpus 15 --memory 20g -e BENTOML_CONFIG_OPTIONS='api_server.traffic.timeout=1200 runners.resources.cpu=0.5 runners.resources."nvidia.com/gpu"=0' analytics:latest serve`
+- Run the below command to launch the service as a Docker
+    
+`docker run --network host -it --rm -p 3000:3000 -p 5000:5000 -p 8888:8888 --cpus 15 --memory 20g -e BENTOML_CONFIG_OPTIONS='api_server.traffic.timeout=1200 runners.resources.cpu=0.5 runners.resources."nvidia.com/gpu"=0' analytics:latest serve`
+
+- Port info:
+    - Port `3000` is the default port that runs API service
+    - Port `5000` is to launch the MLFLOW UI service
+    - Port `8888` is to launch the Jupyter Lab service (if the API version supports)
+- Config info:
+    - cpus: Number of recommended CPU cores (Assuming API inference service running on each core - 15 ML Models being served in this example)
+    - memory: Recommended memory required for the API to be fully functional and operational.
+    - bentoml_config:
+           - api_server.traffic.timeout : API traffic timeout for each service
+           - runners.resources.cpu : cpu resources required for each runner instance inside bentoml service
+           - runners.resources."nvidia.com/gpu"=0': gpu resources required for the API in case of model training performed over a GPU
 
 The above command would enable the ICOS Intelligence Layer Coordination API server to be launched at http://0.0.0.0:3000, which could be accessed using any browser.
 
