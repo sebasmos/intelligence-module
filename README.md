@@ -157,7 +157,15 @@ The current code has been tested in below setups:
 
         - CPU: rockchip-rk3588 8-cores (Cortex-A76, Cortex-A55)
     
-    - **Operating System:** Linux orangepi5 5.10.110 (Debian) 
+    - **Operating System:** Linux orangepi5 5.10.110 (Debian)
+  
+1. Jetson AGX Orin
+   - **Hardware Information:**
+        - CPU: NVIDIA Carmel CPU Arm 12-core Cortex-A78AE.
+        - GPU: Ampere GPU (2048 CUDA cores and 64 Tensor cores)
+        - DLA: 2 NVIDIA Deep Learning Accelerator
+          
+   - **Operating System:** JetPack 5.1 built on Ubuntu 20.04
 
 1. x86_64 TR AMD server.
 
