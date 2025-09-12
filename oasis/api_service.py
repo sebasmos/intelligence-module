@@ -27,6 +27,7 @@ import bentoml
 import requests
 import logging
 import torch
+import os, json, uuid
 from pydantic import BaseModel
 from transformers import AutoTokenizer
 from bentoml.io import NumpyNdarray, JSON, Text
@@ -34,18 +35,18 @@ from api_train import ModelTrain
 import bentoml._internal.service.openapi as icos_api
 from statsmodels.tsa.arima.model import ARIMA
 from typing import Optional, Dict, Any
-from organizer_fl import OrganizerFL, Parameters # TODO
-from model_sync import ModelSyncService
+from tai.organizer_fl import OrganizerFL, Parameters
+from tai.model_sync import ModelSyncService
 from models.management.ai_model_repo import push as repo_push, pull as repo_pull
 
-
-import os, json, uuid
+# Related to FL code from NKUA
 TRIG_FILE = "/tmp/flwr_triggers/trigger.json"
-TRIG_DIR = "/tmp/flwr_triggers"           # full directory, not single file
+TRIG_DIR = "/tmp/flwr_triggers" 
 os.makedirs(TRIG_DIR, exist_ok=True)
 
+# Bentoml logger init
 bentoml_logger = logging.getLogger("bentoml")
-
+# Bentoml API TAG init
 icos_api.APP_TAG = icos_api.Tag(name="core", description="Meta kernel and Security related API service endpoints for training and prediction")
 
 # Metrics Utilisation models
