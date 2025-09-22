@@ -66,8 +66,6 @@ Learning for trust and privacy related applications.
 │   ├── bentofile.yaml
 │   ├── clean_dockers.sh
 │   ├── configuration.yaml
-│   ├── model_sync.py
-│   ├── organizer_fl.py
 │   ├── requirements.txt
 │   ├── models
 │   │   ├── arima
@@ -84,7 +82,9 @@ Learning for trust and privacy related applications.
 │   │   └── utils.py
 │   └── tai
 │       ├── model_explainability.py
-│       └── monitoring.py   
+│       ├── monitoring.py
+│       ├── model_sync.py
+│       └── organizer_fl.py   
 ├── test
 │   ├── api
     │    ├── misc_services.py
