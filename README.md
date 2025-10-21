@@ -35,6 +35,14 @@ The ICOS Intelligence Layer Coordination API offers mechanisms for:
 - **Multiple ML Frameworks**: Support for PyTorch, XGBoost, ARIMA, and LSTM models
 - **RESTful API**: Easy integration with existing systems
 
+## Credits
+
+This open-source AI framework has been developed by:
+- **CeADAR** (Ireland's National Centre for Applied AI, University College Dublin): Jaydeep Samanta, Sebastian Cajas Ordoñez, Romila Ghosh, Dr. Andrés L. Suárez-Cetrulo, and Dr. Ricardo Simón Carbajo
+- **National and Kapodistrian University of Athens (NKUA)**: Anomaly detection and LSTM models
+
+This work has been performed as part of the Intelligence layer of the EU HORIZON project No. 101070177 - IoT to Cloud Operating System (ICOS).
+
 ## Documentation Index
 
 Below is a list of related documentation sections to help you navigate the Intelligence Layer and its capabilities:
